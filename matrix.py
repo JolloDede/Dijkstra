@@ -32,13 +32,13 @@ class Graph:
             print(row)
 
     def connections_from(self, node):
-        # result = [None]
-        # for col in range(len(self.adj_mat[node.index])):
-        #     if self.adj_mat[node.index][col] != 0:
-        #         result += [(self.nodes[node.index], self.adj_mat[node.index][col])]
-        # return result
-        return [(self.nodes[col_num], self.adj_mat[node.index][col_num]) for col_num in range(len(self.adj_mat[node.index])) if
-                self.adj_mat[node.index][col_num] != 0]
+        result = []
+        for col in range(len(self.adj_mat[node.index])):
+            if self.adj_mat[node.index][col] != 0:
+                result += [(self.nodes[col], self.adj_mat[node.index][col])]
+        return result
+        # return [(self.nodes[col_num], self.adj_mat[node.index][col_num]) for col_num in range(len(self.adj_mat[node.index])) if
+        #         self.adj_mat[node.index][col_num] != 0]
 
     def print_dijkstra(self):
         for path in self.dijkstra_distance:
