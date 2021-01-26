@@ -1,5 +1,5 @@
 # Dijkstra
-Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph.
+Dijkstra's algorithm is an greedy-algorithm for finding the shortest paths between nodes in a graph. Greedy means he make the best descission in the moment wich maybe isn't the best in the long term.
 
 I have Implemented a O(n^2) Version of the Algorythmus in Python
 
